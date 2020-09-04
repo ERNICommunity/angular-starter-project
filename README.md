@@ -34,6 +34,8 @@ https://prettier.io
 Prettier is an opinionated code formatter. It can be used to format the code on saving (or on demand).
 This removes the need to discuss style in code reviews and saves time and energy.
 
+In order to be able to run Prettier and TSLint without conflict, `tslint-config-prettier` has been added to this project (https://github.com/prettier/tslint-config-prettier).
+
 How to configure, what is needed for AirBnB Styleguide
 
 ### Husky
