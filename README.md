@@ -23,19 +23,10 @@ The ERNI Angular Starter Project provides a base for starting a new Angular proj
 TODO
 
 ### linting
-Angular 10 uses tslint for linting. Starting with Angular 11, the linting will be done with eslint.
-Therefore this starter project already uses eslint.
+Angular 10 uses tslint by default. Linting is done automatically with each `mvn install` and `mvn build`. It can be invoked manually by calling `ng lint`.
 
-Linting is done automatically with each `mvn install` and `mvn build`. It can be invoked manually by calling `ng lint`.
+Styleguide: AirBnB (TODO: check if possible with tslint, explain)
 
-Styleguide: AirBnB
-
-Infos:
-- https://dev.to/bzvyagintsev/migrate-angular-app-to-eslint-with-prettier-airbnb-styleguide-husky-and-lint-staged-862
-- https://stackoverflow.com/questions/60072821/tslint-is-being-deprecated-how-does-this-affect-angular
-- https://indepth.dev/setting-up-efficient-workflows-with-eslint-prettier-and-typescript/
-- https://eslint.org/blog/2019/01/future-typescript-eslint
-- https://github.com/angular/angular-cli/issues/13732#issuecomment-617274183
 
 ### Prettier
 https://prettier.io
