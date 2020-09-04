@@ -1,20 +1,90 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# ERNI Angular Starter Project
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
+The ERNI Angular Starter Project provides a base for starting a new Angular project. The following main features are included:
+- linting
+- Prettier
+- Husky
+- static code analysis (?)
+- Bootstrap
+- ERNI styled frontend
+- REST calls
+- editor configurations for IntelliJ IDEA, VSCode
+- unit test runner
+- integration test runner
+- e2e test runner
+- HTTP client wrapper & error handling
+- environment configurations
+- dependency injection (should be supported by default)
+- translation pipeline
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+## Features
+### ERNI styled frontend
+TODO
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+### linting
+Angular 10 uses tslint for linting. Starting with Angular 11, the linting will be done with eslint.
+Therefore this starter project already uses eslint.
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+Linting is done automatically with each `mvn install` and `mvn build`. It can be invoked manually by calling `ng lint`.
+
+Styleguide: AirBnB
+
+Infos:
+- https://dev.to/bzvyagintsev/migrate-angular-app-to-eslint-with-prettier-airbnb-styleguide-husky-and-lint-staged-862
+- https://stackoverflow.com/questions/60072821/tslint-is-being-deprecated-how-does-this-affect-angular
+- https://indepth.dev/setting-up-efficient-workflows-with-eslint-prettier-and-typescript/
+- https://eslint.org/blog/2019/01/future-typescript-eslint
+- https://github.com/angular/angular-cli/issues/13732#issuecomment-617274183
+
+### Prettier
+https://prettier.io
+
+Prettier is an opinionated code formatter. It can be used to format the code on saving (or on demand).
+This removes the need to discuss style in code reviews and saves time and energy.
+
+How to configure, what is needed for AirBnB Styleguide
+
+### Husky
+https://github.com/typicode/husky
+
+Git Hooks are scripts which Git calls on certain events such as `commit`, `push`, ...
+For example, this can be used to run linting on commit creation to reduce the number of errors that are part of a pull request.
+Husky allows easy configuration of Git Hooks.
+In this ERNI Angular Starter Project, Husky is configured to use `lint-staged` to lint only staged files
+(as linting may take a long time on larger projects).
+
+The configuration for Husky is done within `package.json`
+
+
+### Bootstrap
+https://getbootstrap.com/
+
+Bootstrap is a front-end open source toolkit which helps to quickly design and customize responsive mobile-first sites.
+To be able to use Bootstrap, the dependencies `bootstrap` and `jquery` have been added to `package.json`.
+In `angular.json`, the Bootstrap style sheet has been added ("styles") and the Bootstrap and the jQuery JS files have been added as "scripts".
+
+## Development
+### Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+### Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+### Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+### Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+### Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+### Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
