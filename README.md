@@ -25,7 +25,9 @@ TODO
 ### linting
 Angular 10 uses tslint by default. Linting is done automatically with each `mvn install` and `mvn build`. It can be invoked manually by calling `ng lint`.
 
-Styleguide: AirBnB (TODO: check if possible with tslint, explain)
+TODO:
+- Deactivate rules which conflict with Prettier
+- Check if AirBnB-Styleguide is available for TSLint, if yes: integrate and explain
 
 
 ### Prettier
@@ -36,9 +38,11 @@ This removes the need to discuss style in code reviews and saves time and energy
 
 In order to be able to run Prettier and TSLint without conflict, `tslint-config-prettier` has been added to this project (https://github.com/prettier/tslint-config-prettier).
 
-How to configure, what is needed for AirBnB Styleguide
+TODO:
+- How to configure
+- what is needed for AirBnB Styleguide / is AirBnB possible with Prettier and TSLint
 
-### Husky
+### TODO: Husky
 https://github.com/typicode/husky
 
 Git Hooks are scripts which Git calls on certain events such as `commit`, `push`, ...
@@ -50,13 +54,18 @@ In this ERNI Angular Starter Project, Husky is configured to use `lint-staged` t
 The configuration for Husky is done within `package.json`
 
 
-### Bootstrap
+### TODO: Bootstrap
 https://getbootstrap.com/
 
 Bootstrap is a front-end open source toolkit which helps to quickly design and customize responsive mobile-first sites.
 To be able to use Bootstrap, the dependencies `bootstrap` and `jquery` have been added to `package.json`.
 In `angular.json`, the Bootstrap style sheet has been added ("styles") and the Bootstrap and the jQuery JS files have been added as "scripts".
 
+
+
+
+
+# DELETE BELOW
 ## Development
 ### Development server
 
