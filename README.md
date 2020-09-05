@@ -25,6 +25,11 @@ TODO
 ### linting
 Angular 10 uses tslint by default. Linting is done automatically with each `mvn install` and `mvn build`. It can be invoked manually by calling `ng lint`.
 
+The AirBnB Styleguide for TSLint (https://github.com/progre/tslint-config-airbnb) provides quite an extensive (and strict) set of rules.
+As an example for using a stylguide, it has been included into the ERNI Angular Starter Project.
+As soon as Angular has been moved from TSLint to ESLint, this styleguide will also have to be replaced with the ESLint version.
+
+
 TODO:
 - Deactivate rules which conflict with Prettier
 - Check if AirBnB-Styleguide is available for TSLint, if yes: integrate and explain
