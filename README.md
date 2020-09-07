@@ -2,6 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
 The ERNI Angular Starter Project provides a base for starting a new Angular project. The following main features are included:
+
 - linting
 - Prettier
 - Husky
@@ -19,30 +20,35 @@ The ERNI Angular Starter Project provides a base for starting a new Angular proj
 - translation pipeline
 
 ## Getting Started
+
 After cloning the project ...
 
 ## Commands
-| Command        | Explanation                    |
-| -------------- | ------------------------------ |
-| `npm run lint` | Runs TSLint on the project     |
+
+| Command        | Explanation                |
+| -------------- | -------------------------- |
+| `npm run lint` | Runs TSLint on the project |
 
 ## Features
+
 ### ERNI styled frontend
+
 TODO
 
 ### linting
+
 Angular 10 uses tslint by default. Linting is done automatically with each `mvn install` and `mvn build`. It can be invoked manually by calling `ng lint`.
 
 The AirBnB Styleguide for TSLint (https://github.com/progre/tslint-config-airbnb) provides quite an extensive (and strict) set of rules.
 As an example for using a stylguide, it has been included into the ERNI Angular Starter Project.
 As soon as Angular has been moved from TSLint to ESLint, this styleguide will also have to be replaced with the ESLint version.
 
-
 TODO:
+
 - Check if AirBnB-Styleguide for TSLint works, explain how to deactivate
 
-
 ### Prettier
+
 https://prettier.io
 
 Prettier is an opinionated code formatter. It can be used to format the code on saving (or on demand).
@@ -55,10 +61,12 @@ To find which rules are in conflict, you can run `npm run tslint-check`.
 This prints a list of conflicting rules which can then be deactivated in `./tslint.json`
 
 TODO:
+
 - How to configure
 - what is needed for AirBnB Styleguide / is AirBnB possible with Prettier and TSLint
 
 ### Husky
+
 https://github.com/typicode/husky
 
 Git Hooks are scripts which Git calls on certain events such as `commit`, `push`, ...
@@ -69,20 +77,18 @@ In this ERNI Angular Starter Project, Husky is configured to use `lint-staged` t
 
 The configuration for Husky is done within `package.json`
 
-
 ### Bootstrap
+
 https://getbootstrap.com/
 
 Bootstrap is a front-end open source toolkit which helps to quickly design and customize responsive mobile-first sites.
 To be able to use Bootstrap, the dependencies `bootstrap` and `jquery` have been added to `package.json`.
 In `angular.json`, the Bootstrap style sheet has been added ("styles") and the Bootstrap and the jQuery JS files have been added as "scripts".
 
-
-
-
-
 # DELETE BELOW
+
 ## Development
+
 ### Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
