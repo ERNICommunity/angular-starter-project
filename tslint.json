@@ -1,41 +1,29 @@
 {
   "extends": [
     "tslint:recommended",
-    "tslint-config-prettier",
-    "tslint-config-airbnb"
+    "tslint-config-airbnb",
+    "tslint-config-prettier"
   ],
   "rulesDirectory": [
     "codelyzer"
   ],
   "rules": {
-    "align": {
-      "options": [
-        "parameters",
-        "statements"
-      ]
-    },
+    "align": false,
     "array-type": false,
     "arrow-return-shorthand": true,
     "curly": true,
     "deprecation": {
       "severity": "warning"
     },
-    "eofline": true,
+    "eofline": false,
     "import-blacklist": [
       true,
       "rxjs/Rx"
     ],
-    "import-spacing": true,
-    "indent": {
-      "options": [
-        "spaces"
-      ]
-    },
+    "import-spacing": false,
+    "indent": false,
     "max-classes-per-file": false,
-    "max-line-length": [
-      true,
-      140
-    ],
+    "max-line-length": false,
     "member-ordering": [
       true,
       {
@@ -64,50 +52,15 @@
     "no-redundant-jsdoc": true,
     "no-switch-case-fall-through": true,
     "no-var-requires": false,
-    "object-literal-key-quotes": [
-      true,
-      "as-needed"
-    ],
-    "quotemark": [
-      true,
-      "single"
-    ],
-    "semicolon": {
-      "options": [
-        "always"
-      ]
-    },
-    "space-before-function-paren": {
-      "options": {
-        "anonymous": "never",
-        "asyncArrow": "always",
-        "constructor": "never",
-        "method": "never",
-        "named": "never"
-      }
-    },
+    "object-literal-key-quotes": false,
+    "quotemark": false,
+    "semicolon": false,
+    "space-before-function-paren": false,
     "typedef": [
       true,
       "call-signature"
     ],
-    "typedef-whitespace": {
-      "options": [
-        {
-          "call-signature": "nospace",
-          "index-signature": "nospace",
-          "parameter": "nospace",
-          "property-declaration": "nospace",
-          "variable-declaration": "nospace"
-        },
-        {
-          "call-signature": "onespace",
-          "index-signature": "onespace",
-          "parameter": "onespace",
-          "property-declaration": "onespace",
-          "variable-declaration": "onespace"
-        }
-      ]
-    },
+    "typedef-whitespace": false,
     "variable-name": {
       "options": [
         "ban-keywords",
@@ -115,16 +68,7 @@
         "allow-pascal-case"
       ]
     },
-    "whitespace": {
-      "options": [
-        "check-branch",
-        "check-decl",
-        "check-operator",
-        "check-separator",
-        "check-type",
-        "check-typecast"
-      ]
-    },
+    "whitespace": false,
     "component-class-suffix": true,
     "contextual-lifecycle": true,
     "directive-class-suffix": true,

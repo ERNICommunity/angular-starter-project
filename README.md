@@ -18,6 +18,14 @@ The ERNI Angular Starter Project provides a base for starting a new Angular proj
 - dependency injection (should be supported by default)
 - translation pipeline
 
+## Getting Started
+After cloning the project ...
+
+## Commands
+| Command        | Explanation                    |
+| -------------- | ------------------------------ |
+| `npm run lint` | Runs TSLint on the project     |
+
 ## Features
 ### ERNI styled frontend
 TODO
@@ -31,8 +39,7 @@ As soon as Angular has been moved from TSLint to ESLint, this styleguide will al
 
 
 TODO:
-- Deactivate rules which conflict with Prettier
-- Check if AirBnB-Styleguide is available for TSLint, if yes: integrate and explain
+- Check if AirBnB-Styleguide for TSLint works, explain how to deactivate
 
 
 ### Prettier
@@ -42,6 +49,10 @@ Prettier is an opinionated code formatter. It can be used to format the code on 
 This removes the need to discuss style in code reviews and saves time and energy.
 
 In order to be able to run Prettier and TSLint without conflict, `tslint-config-prettier` has been added to this project (https://github.com/prettier/tslint-config-prettier).
+
+There is still the possibility, that there are some rules in TSLint which conflict with Prettier.
+To find which rules are in conflict, you can run `npm run tslint-check`.
+This prints a list of conflicting rules which can then be deactivated in `./tslint.json`
 
 TODO:
 - How to configure
