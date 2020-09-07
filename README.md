@@ -58,7 +58,7 @@ TODO:
 - How to configure
 - what is needed for AirBnB Styleguide / is AirBnB possible with Prettier and TSLint
 
-### TODO: Husky
+### Husky
 https://github.com/typicode/husky
 
 Git Hooks are scripts which Git calls on certain events such as `commit`, `push`, ...
@@ -70,7 +70,7 @@ In this ERNI Angular Starter Project, Husky is configured to use `lint-staged` t
 The configuration for Husky is done within `package.json`
 
 
-### TODO: Bootstrap
+### Bootstrap
 https://getbootstrap.com/
 
 Bootstrap is a front-end open source toolkit which helps to quickly design and customize responsive mobile-first sites.
