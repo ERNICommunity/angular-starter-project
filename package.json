@@ -59,8 +59,7 @@
   },
   "lint-staged": {
     "./**/*.{js,ts,json,scss,md}": [
-      "prettier --write",
-      "npm run lint"
+      "prettier --write"
     ]
   }
 }

@@ -2,10 +2,10 @@
  * Specifying prettier settings
  */
 module.exports = {
-  trailingComma: "all",
+  trailingComma: 'all',
   tabWidth: 2,
   semi: true,
   singleQuote: true,
   bracketSpacing: true,
-  printWidth: 100
+  printWidth: 100,
 };
