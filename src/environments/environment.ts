@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  baseUrlRestService: 'https://swisspost.opendatasoft.com/api/v2/catalog/datasets/',
 };
 
 /*

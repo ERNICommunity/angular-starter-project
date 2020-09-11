@@ -3,8 +3,14 @@ $color-erni-blue: #033778;
 $color-erni-light-blue: #ddeaee;
 $color-white: #ffffff;
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
   font-family: 'Source Sans Pro', sans-serif;
   color: $color-white;
   background-color: $color-erni-blue;
+  margin-bottom: 60px; /* Corresponds to footer height */
 }

@@ -12,5 +12,7 @@ export class FooterComponent implements OnInit {
 
   test() {
     var a = 0;
+    let b =1;
+
   }
 }

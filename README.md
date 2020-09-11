@@ -28,6 +28,11 @@ After cloning the project ...
 | Command        | Explanation                |
 | -------------- | -------------------------- |
 | `npm run lint` | Runs TSLint on the project |
+| `npm run start` | Compiles and starts the angular app. It is then served to http://localhost:4200 |
+| `npm run build` | Builds the angular app |
+| `npm run test` | Runs the tests of the angular app |
+| `npm run e2e` | Runs the e2e-tests of the angular app |
+| `npm run tslint-check` | Checks if there are any rules in TSLint which conflict with Prettier |
 
 ## Features
 

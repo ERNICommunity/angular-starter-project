@@ -1,0 +1,17 @@
+<div class="container mt-4 mb-4">
+
+  <h1>REST-Call</h1>
+
+  <p>This page demonstrates how a simple REST call can be done. It therefore calls the following endpoint:</p>
+  <ul>
+    <li>https://opendata.swiss.ch/blabla</li>
+  </ul>
+
+  <div *ngIf="isDataLoading" class="spinner-border"></div>
+  <div *ngIf="!isDataLoading && !dataLoadingError">
+    <p>Result:</p>
+    <p>Data successfully loaded - will be displayed soon.</p>
+  </div>
+  <div *ngIf="!isDataLoading && dataLoadingError" class="text-warning">Loading error</div>
+
+</div>
