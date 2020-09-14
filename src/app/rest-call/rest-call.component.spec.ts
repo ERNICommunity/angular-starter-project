@@ -8,9 +8,8 @@ describe('RestCallComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RestCallComponent ]
-    })
-    .compileComponents();
+      declarations: [RestCallComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

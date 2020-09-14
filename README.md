@@ -25,14 +25,14 @@ After cloning the project ...
 
 ## Commands
 
-| Command        | Explanation                |
-| -------------- | -------------------------- |
-| `npm run lint` | Runs TSLint on the project |
-| `npm run start` | Compiles and starts the angular app. It is then served to http://localhost:4200 |
-| `npm run build` | Builds the angular app |
-| `npm run test` | Runs the tests of the angular app |
-| `npm run e2e` | Runs the e2e-tests of the angular app |
-| `npm run tslint-check` | Checks if there are any rules in TSLint which conflict with Prettier |
+| Command                | Explanation                                                                     |
+| ---------------------- | ------------------------------------------------------------------------------- |
+| `npm run lint`         | Runs TSLint on the project                                                      |
+| `npm run start`        | Compiles and starts the angular app. It is then served to http://localhost:4200 |
+| `npm run build`        | Builds the angular app                                                          |
+| `npm run test`         | Runs the tests of the angular app                                               |
+| `npm run e2e`          | Runs the e2e-tests of the angular app                                           |
+| `npm run tslint-check` | Checks if there are any rules in TSLint which conflict with Prettier            |
 
 ## Features
 
@@ -64,6 +64,13 @@ In order to be able to run Prettier and TSLint without conflict, `tslint-config-
 There is still the possibility, that there are some rules in TSLint which conflict with Prettier.
 To find which rules are in conflict, you can run `npm run tslint-check`.
 This prints a list of conflicting rules which can then be deactivated in `./tslint.json`
+
+Prettier provides several commands - the following list shows some of the more important ones:
+
+| Command              | Explanation                                            |
+| -------------------- | ------------------------------------------------------ |
+| `prettier --check .` | Checks all files if they would need to be formatted    |
+| `prettier --write .` | Rewrites all processed files in place and formats them |
 
 TODO:
 
