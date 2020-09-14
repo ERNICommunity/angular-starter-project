@@ -14,9 +14,9 @@ export class RestCallComponent implements OnInit {
   public isDataLoading: boolean;
   public dataLoadingError: boolean;
 
-  private allPrenames: PrenameRanking[];
-  private rank1Prenames: PrenameRanking[];
-  private prenamesUrl: string;
+  public allPrenames: PrenameRanking[];
+  public rank1Prenames: PrenameRanking[];
+  public prenamesUrl: string;
 
   constructor(private restService: RestService) { }
 
