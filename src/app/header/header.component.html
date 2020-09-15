@@ -3,9 +3,9 @@
     <div class="col-8">ERNI Angular Starter Project</div>
     <div class="col-4 text-right">
       Language:
-      <select>
-        <option>EN</option>
-        <option>DE</option>
+      <select (change)="changeLanguage($event.target.value)">
+        <option value="en">EN</option>
+        <option value="de">DE</option>
       </select>
     </div>
   </nav>

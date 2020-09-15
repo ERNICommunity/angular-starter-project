@@ -72,6 +72,8 @@ Prettier provides several commands - the following list shows some of the more i
 | `prettier --check .` | Checks all files if they would need to be formatted    |
 | `prettier --write .` | Rewrites all processed files in place and formats them |
 
+https://prettier.io/docs/en/cli.html
+
 TODO:
 
 - How to configure
@@ -96,6 +98,11 @@ https://getbootstrap.com/
 Bootstrap is a front-end open source toolkit which helps to quickly design and customize responsive mobile-first sites.
 To be able to use Bootstrap, the dependencies `bootstrap` and `jquery` have been added to `package.json`.
 In `angular.json`, the Bootstrap style sheet has been added ("styles") and the Bootstrap and the jQuery JS files have been added as "scripts".
+
+### Translation pipeline
+
+- https://github.com/ngx-translate/core
+- http://www.ngx-translate.com/
 
 # DELETE BELOW
 
