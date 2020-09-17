@@ -2,8 +2,8 @@
   "WELCOME": {
     "TITLE": "ERNI Angular Starter Project",
     "INFORMATION": "Das ERNI Angular Starter Project bietet ein Angular-Projekt, das schnell eingerichtet werden kann und einige zusätzliche Funktionen enthält. Weitere Informationen erhalten Sie in der README.md",
-    "LINK_DESCRIPTION": "Besides this start page, there is also a second page which loads and displays some date from a REST endpoint:",
-    "BUTTON_REST_CALL": "Rest-Call Page",
+    "LINK_DESCRIPTION": "Neben dieser Startseite lädt eine zweite Seite Daten über eine REST-Schnittstelle und stellt diese Daten dar:",
+    "BUTTON_REST_CALL": "REST-Aufruf",
     "DESCRIPTION_TRANSLATION": "To show how a translation pipeline could be added, this page can be displayed in both English and German. The language can be changed in the header."
   },
   "REST_CALL": {
