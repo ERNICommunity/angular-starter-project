@@ -3,27 +3,31 @@
 
   <p>This page demonstrates how a simple REST call can be done. It therefore calls the following endpoint:</p>
   <ul>
-    <li>{{ this.prenamesUrl }}</li>
+    <li>{{ this.restService.SERVICE_URL_PRENAMES }}</li>
   </ul>
   <p>
     This endpoint can be used to load the most common prename per postcode in Switzerland. The resulting list is then
     sorted by village/town and displayed below.
   </p>
 
-  <div *ngIf="isDataLoading" class="spinner-border"></div>
-  <div *ngIf="!isDataLoading && !dataLoadingError">
+  <div>
     <div class="row">
       <div class="col-4 text-primary">City</div>
       <div class="col-2 text-primary">PLZ</div>
       <div class="col-4 text-primary">Prename</div>
       <div class="col-2 text-primary">Number</div>
     </div>
-    <div class="row" *ngFor="let prename of rank1Prenames">
+    <div *ngIf="restService.prenamesLoading" class="row mt-3">
+      <div class="col-5"></div>
+      <div class="spinner-border"></div>
+      <div class="col-5"></div>
+    </div>
+    <div class="row" *ngFor="let prename of sortedPrenames$ | async">
       <div class="col-4">{{ prename.ortbez18 }}</div>
       <div class="col-2">{{ prename.plz }}</div>
       <div class="col-4">{{ prename.vorname }}</div>
       <div class="col-2">{{ prename.anzahl }}</div>
     </div>
   </div>
-  <div *ngIf="!isDataLoading && dataLoadingError" class="text-warning">Loading error</div>
+  <div *ngIf="!restService.prenamesLoading && restService.prenameLoadingError" class="text-warning">Loading error</div>
 </div>
