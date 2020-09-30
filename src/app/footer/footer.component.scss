@@ -1,7 +1,14 @@
+$color-erni-light-blue: #ddeaee;
+$color-dark-grey: #666;
+$color-black: rgba(0, 0, 0, 0.05);
+
 .footer {
   position: absolute;
+  background-color: $color-erni-light-blue;
+  color: $color-dark-grey;
+  border-top: 1px solid $color-black;
   bottom: 0;
   width: 100%;
-  height: 60px;
-  line-height: 60px; /* Vertically center the text */
+  height: 30px;
+  line-height: 30px; /* Vertically center the text */
 }
