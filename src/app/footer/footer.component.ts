@@ -13,5 +13,6 @@ export class FooterComponent implements OnInit {
   test() {
     var a = 0;
     let b = 1;
+    let c = a + 2;
   }
 }
