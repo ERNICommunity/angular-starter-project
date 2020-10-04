@@ -55,10 +55,11 @@
     "typescript": "~4.0.2"
   },
   "lint-staged": {
-    "./**/*.{js,ts,json,scss,md}": [
+    "./**/*.{js,ts}": [
       "tslint --fix",
       "prettier --write"
-    ]
+    ],
+    "./**/*.{json,md,scss}": "prettier --write"
   },
   "husky": {
     "hooks": {

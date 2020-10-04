@@ -38,19 +38,24 @@ After cloning the project ...
 
 ### ERNI styled frontend
 
-TODO
+The frontend of this starter project is styled as en ERNI app.
+It uses official ERNI logos and favicon as well as the "ERNI-blue" as background color.
 
 ### linting
 
-Angular 10 uses tslint by default. Linting is done automatically with each `mvn install` and `mvn build`. It can be invoked manually by calling `ng lint`.
+https://palantir.github.io/tslint/
+
+Angular 10 uses TSLint by default. Linting is done automatically with each `mvn install` and `mvn build`. It can be invoked manually by calling `ng lint`.
 
 The AirBnB Styleguide for TSLint (https://github.com/progre/tslint-config-airbnb) provides quite an extensive (and strict) set of rules.
 As an example for using a stylguide, it has been included into the ERNI Angular Starter Project.
 As soon as Angular has been moved from TSLint to ESLint, this styleguide will also have to be replaced with the ESLint version.
 
-TODO:
+Deactivating the AirBnB-Styleguide can be done quite easily by removing `tslint-config-airbnb` from the `extends` section in the file `tslint.json`.
+If you want to completely remove the AirBnB-Styleguide you then can run the command `npm uninstall tslint-config-airbnb`.
 
-- Check if AirBnB-Styleguide for TSLint works, explain how to deactivate
+> In a future release, Angular will migrate from TSLint to ESLint.
+> As soon as this migration has been done, this project needs to be updated.
 
 ### Prettier
 
@@ -58,6 +63,9 @@ https://prettier.io
 
 Prettier is an opinionated code formatter. It can be used to format the code on saving (or on demand).
 This removes the need to discuss style in code reviews and saves time and energy.
+
+You can configure Prettier by changing the file `.prettierrc.js`.
+More information can be found here: https://prettier.io/docs/en/configuration.html
 
 In order to be able to run Prettier and TSLint without conflict, `tslint-config-prettier` has been added to this project (https://github.com/prettier/tslint-config-prettier).
 
@@ -72,12 +80,7 @@ Prettier provides several commands - the following list shows some of the more i
 | `prettier --check .` | Checks all files if they would need to be formatted    |
 | `prettier --write .` | Rewrites all processed files in place and formats them |
 
-https://prettier.io/docs/en/cli.html
-
-TODO:
-
-- How to configure
-- what is needed for AirBnB Styleguide / is AirBnB possible with Prettier and TSLint
+You can find a complete list of all commands here: https://prettier.io/docs/en/cli.html
 
 ### Husky
 
