@@ -14,8 +14,7 @@ export class NamesRestHttpService {
 
   constructor(private httpClient: HttpClient) {}
 
-  readonly SERVICE_URL_PRENAMES = environment.baseUrlRestService + 'vornamen_proplz/exports/json';
-  readonly SERVICE_URL_SURNAMES = environment.baseUrlRestService + 'nachnamen_proplz/exports/json';
+  readonly SERVICE_URL_PRENAMES = `${environment.baseUrlRestService} vornamen_proplz/exports/json`;
 
   public getDataPrenames(): Observable<PrenameRanking[]> {
     this.prenamesLoading = true;
@@ -40,12 +39,8 @@ export class NamesRestHttpService {
     );
   }
 
-  public getDataSurnames(): Observable<any> {
-    return this.httpClient.get<any>(this.SERVICE_URL_SURNAMES);
-  }
-
   private sortPrenameRankingByVillageAndPostcode(p1: PrenameRanking, p2: PrenameRanking): number {
-    let comparisonByVillage = p1.ortbez18.localeCompare(p2.ortbez18);
+    const comparisonByVillage = p1.ortbez18.localeCompare(p2.ortbez18);
     if (comparisonByVillage === 0) {
       return p1.plz.localeCompare(p2.plz);
     }

@@ -56,7 +56,7 @@
   },
   "lint-staged": {
     "./**/*.{js,ts,json,scss,md}": [
-      "tslint -v",
+      "tslint --fix",
       "prettier --write"
     ]
   },
