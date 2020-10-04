@@ -14,7 +14,7 @@ export class NamesRestHttpService {
 
   constructor(private httpClient: HttpClient) {}
 
-  readonly SERVICE_URL_PRENAMES = `${environment.baseUrlRestService} vornamen_proplz/exports/json`;
+  readonly SERVICE_URL_PRENAMES = `${environment.baseUrlRestService}vornamen_proplz/exports/json`;
 
   public getDataPrenames(): Observable<PrenameRanking[]> {
     this.prenamesLoading = true;
