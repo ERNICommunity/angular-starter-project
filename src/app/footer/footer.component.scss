@@ -12,3 +12,15 @@ $color-black: rgba(0, 0, 0, 0.05);
   height: 30px;
   line-height: 30px; /* Vertically center the text */
 }
+
+.footer-logo-container {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.footer-logo {
+  max-width: 60px;
+  max-height: 30px;
+  vertical-align: middle;
+}

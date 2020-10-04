@@ -1,12 +1,26 @@
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-    <div class="col-8">ERNI Angular Starter Project</div>
-    <div class="col-4 text-right">
-      Language:
-      <select (change)="changeLanguage($event.target.value)">
-        <option value="en">EN</option>
-        <option value="de">DE</option>
-      </select>
-    </div>
-  </nav>
+  <div class="row header">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-primary">
+      <a class="navbar-brand" href="#">
+        <img src="assets/images/erni-logo-white-only.png" class="header-logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link text-white" href="#">Welcome</a>
+          <a class="nav-item nav-link text-white" href="/rest">Rest-Call</a>
+        </div>
+      </div>
+      <div class="text-right">
+        Language:
+        <select (change)="changeLanguage($event.target.value)">
+          <option value="en">EN</option>
+          <option value="de">DE</option>
+        </select>
+      </div>
+    </nav>
+  </div>
 </header>
