@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import { NamesRestService } from '../service/names-rest.service';
+import { NamesRestHttpService } from '../service/names-rest.service';
 import {Observable} from "rxjs";
 import {PrenameRanking} from "../model/prename-ranking";
 
@@ -11,7 +11,7 @@ import {PrenameRanking} from "../model/prename-ranking";
 export class RestCallComponent implements OnInit {
   public sortedPrenames$: Observable<PrenameRanking[]>;
 
-  constructor(public restService: NamesRestService) {}
+  constructor(public restService: NamesRestHttpService) {}
 
   ngOnInit(): void {
     this.sortedPrenames$ = this.restService.getDataPrenamesSorted();

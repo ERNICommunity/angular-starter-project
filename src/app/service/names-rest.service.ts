@@ -8,7 +8,7 @@ import {catchError, filter, finalize, map} from "rxjs/operators";
 @Injectable({
   providedIn: 'root',
 })
-export class NamesRestService {
+export class NamesRestHttpService {
   public prenamesLoading = true;
   public prenameLoadingError = false;
 
