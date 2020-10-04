@@ -1,9 +1,9 @@
-import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {environment} from '../../environments/environment';
-import {Observable, of} from 'rxjs';
-import {PrenameRanking} from '../model/prename-ranking';
-import {catchError, finalize, map} from "rxjs/operators";
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { environment } from '../../environments/environment';
+import { Observable, of } from 'rxjs';
+import { PrenameRanking } from '../model/prename-ranking';
+import { catchError, finalize, map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -12,8 +12,7 @@ export class NamesRestHttpService {
   public prenamesLoading = true;
   public prenameLoadingError = false;
 
-  constructor(private httpClient: HttpClient) {
-  }
+  constructor(private httpClient: HttpClient) {}
 
   readonly SERVICE_URL_PRENAMES = environment.baseUrlRestService + 'vornamen_proplz/exports/json';
   readonly SERVICE_URL_SURNAMES = environment.baseUrlRestService + 'nachnamen_proplz/exports/json';
@@ -22,33 +21,23 @@ export class NamesRestHttpService {
     this.prenamesLoading = true;
     this.prenameLoadingError = false;
 
-    return this.httpClient.get<PrenameRanking[]>(this.SERVICE_URL_PRENAMES)
-      .pipe(
-        catchError(err => {
-          this.prenameLoadingError = true;
-          return of([]);
-        }),
-        finalize(() => {
-          this.prenamesLoading = false;
-        })
-      );
+    return this.httpClient.get<PrenameRanking[]>(this.SERVICE_URL_PRENAMES).pipe(
+      catchError((err) => {
+        this.prenameLoadingError = true;
+        return of([]);
+      }),
+      finalize(() => {
+        this.prenamesLoading = false;
+      }),
+    );
   }
 
   public getDataPrenamesSorted(): Observable<PrenameRanking[]> {
-    return this.getDataPrenames()
-      .pipe(
-        map(
-          prenameRankings => prenameRankings.filter(ranking => ranking.rang === 1)
-        ),
-        map(
-          prenameRankings => prenameRankings.filter(ranking => ranking.ortbez18 != null)
-        ),
-        map(
-          prenameRankings => prenameRankings.sort(
-            (r1, r2) => this.sortPrenameRankingByVillageAndPostcode(r1, r2)
-          )
-        )
-      );
+    return this.getDataPrenames().pipe(
+      map((prenameRankings) => prenameRankings.filter((ranking) => ranking.rang === 1)),
+      map((prenameRankings) => prenameRankings.filter((ranking) => ranking.ortbez18 != null)),
+      map((prenameRankings) => prenameRankings.sort((r1, r2) => this.sortPrenameRankingByVillageAndPostcode(r1, r2))),
+    );
   }
 
   public getDataSurnames(): Observable<any> {

@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NamesRestHttpService } from '../service/names-rest.service';
-import {Observable} from "rxjs";
-import {PrenameRanking} from "../model/prename-ranking";
+import { Observable } from 'rxjs';
+import { PrenameRanking } from '../model/prename-ranking';
 
 @Component({
   selector: 'app-rest-call',
