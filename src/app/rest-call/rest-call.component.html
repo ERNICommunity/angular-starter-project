@@ -1,21 +1,18 @@
 <div class="container mt-4 mb-4">
-  <h1>REST-Call</h1>
+  <h1>{{ 'REST_CALL.TITLE' | translate }}</h1>
 
-  <p>This page demonstrates how a simple REST call can be done. It therefore calls the following endpoint:</p>
+  <p>{{ 'REST_CALL.INFORMATION' | translate }}</p>
   <ul>
     <li>{{ this.restService.SERVICE_URL_PRENAMES }}</li>
   </ul>
-  <p>
-    This endpoint can be used to load the most common prename per postcode in Switzerland. The resulting list is then
-    sorted by village/town and displayed below.
-  </p>
+  <p>{{ 'REST_CALL.ENDPOINT_DESCRIPTION' | translate }}</p>
 
   <div>
     <div class="row">
-      <div class="col-4 text-primary">City</div>
-      <div class="col-2 text-primary">PLZ</div>
-      <div class="col-4 text-primary">Prename</div>
-      <div class="col-2 text-primary">Number</div>
+      <div class="col-4 text-primary">{{ 'REST_CALL.TABLE.CITY' | translate }}</div>
+      <div class="col-2 text-primary">{{ 'REST_CALL.TABLE.ZIP_CODE' | translate }}</div>
+      <div class="col-4 text-primary">{{ 'REST_CALL.TABLE.PRENAME' | translate }}</div>
+      <div class="col-2 text-primary">{{ 'REST_CALL.TABLE.NUMBER' | translate }}</div>
     </div>
     <div *ngIf="restService.prenamesLoading" class="row mt-3">
       <div class="col-5"></div>

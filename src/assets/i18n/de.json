@@ -3,10 +3,22 @@
     "TITLE": "ERNI Angular Starter Project",
     "INFORMATION": "Das ERNI Angular Starter Project bietet ein Angular-Projekt, das schnell eingerichtet werden kann und einige zusätzliche Funktionen enthält. Weitere Informationen erhalten Sie in der README.md",
     "LINK_DESCRIPTION": "Neben dieser Startseite lädt eine zweite Seite Daten über eine REST-Schnittstelle und stellt diese Daten dar:",
+    "LINK": {
+      "WELCOME": "Welcome-Seite",
+      "REST": "Rest-Call-Seite"
+    },
     "BUTTON_REST_CALL": "REST-Aufruf",
-    "DESCRIPTION_TRANSLATION": "To show how a translation pipeline could be added, this page can be displayed in both English and German. The language can be changed in the header."
+    "DESCRIPTION_TRANSLATION": "Um zu zeigen, wie eine Translation Pipeline benutzt werden kann, kann die Seite sowohl in Deutsch als auch in Englisch angezeigt werden. Die Sprache kann im Header geändert werden."
   },
   "REST_CALL": {
-    "TITLE": ""
+    "TITLE": "REST Beispiel",
+    "INFORMATION": "Diese Seite demonstiert, wie ein einfacher REST Call implementiert werden kann. Dazu wird folgender Endpoint aufgerufen:",
+    "ENDPOINT_DESCRIPTION": "Dieser Endpoint liefert die häufigsten Vornamen pro PLZ in der Schweiz. Die resultierende Liste wird dann nach Ort sortiert und hier darfestellt.",
+    "TABLE": {
+      "CITY": "Ort",
+      "ZIP_CODE": "PLZ",
+      "PRENAME": "Vorname",
+      "NUMBER": "Anzahl"
+    }
   }
 }
