@@ -13,7 +13,7 @@
   "REST_CALL": {
     "TITLE": "REST Beispiel",
     "INFORMATION": "Diese Seite demonstiert, wie ein einfacher REST Call implementiert werden kann. Dazu wird folgender Endpoint aufgerufen:",
-    "ENDPOINT_DESCRIPTION": "Dieser Endpoint liefert die häufigsten Vornamen pro PLZ in der Schweiz. Die resultierende Liste wird dann nach Ort sortiert und hier darfestellt.",
+    "ENDPOINT_DESCRIPTION": "Dieser Endpoint liefert die häufigsten Vornamen pro PLZ in der Schweiz. Die resultierende Liste wird dann nach Ort sortiert und hier dargestellt.",
     "TABLE": {
       "CITY": "Ort",
       "ZIP_CODE": "PLZ",
