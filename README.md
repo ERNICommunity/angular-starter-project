@@ -45,7 +45,7 @@ It uses official ERNI logos and favicon as well as the "ERNI-blue" as background
 
 https://palantir.github.io/tslint/
 
-Angular 10 uses TSLint by default. Linting is done automatically with each `mvn install` and `mvn build`. It can be invoked manually by calling `ng lint`.
+Angular 10 uses TSLint by default. Linting is done automatically with each commit (as long as the Git-Tool you use supports pre-commit hooks). It can be invoked manually by calling `ng lint`.
 
 The AirBnB Styleguide for TSLint (https://github.com/progre/tslint-config-airbnb) provides quite an extensive (and strict) set of rules.
 As an example for using a stylguide, it has been included into the ERNI Angular Starter Project.
