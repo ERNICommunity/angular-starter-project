@@ -8,9 +8,15 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
-    page.navigateTo();
-    expect(page.getTitleText()).toEqual('angular-starter-project app is running!');
+  it('should display the welcome page title', () => {
+    page.navigateToMainPage();
+    expect(page.getWelcomePageTitleText()).toEqual('ERNI Angular Starter Project');
+  });
+
+  it('should load the rest call page when clicking the link', () => {
+    page.navigateToMainPage();
+    page.navigateToRestCallPage();
+    expect(page.getRestCallPageTitleText()).toEqual('REST Example');
   });
 
   afterEach(async () => {

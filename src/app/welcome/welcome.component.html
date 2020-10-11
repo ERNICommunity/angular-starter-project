@@ -1,5 +1,5 @@
 <div class="container mt-4 mb-4">
-  <h1>{{ 'WELCOME.TITLE' | translate }}</h1>
+  <h1 id="welcomePageTitle">{{ 'WELCOME.TITLE' | translate }}</h1>
   <p>{{ 'WELCOME.INFORMATION' | translate }}</p>
   <p>{{ 'WELCOME.LINK_DESCRIPTION' | translate }}</p>
   <ul>
@@ -7,7 +7,7 @@
       <a routerLink="/welcome" routerLinkActive="active">{{ 'WELCOME.LINK.WELCOME' | translate }}</a>
     </li>
     <li>
-      <a routerLink="/rest" routerLinkActive="active">{{ 'WELCOME.LINK.REST' | translate }}</a>
+      <a routerLink="/rest" routerLinkActive="active" id="linkToRestCallPage">{{ 'WELCOME.LINK.REST' | translate }}</a>
     </li>
   </ul>
 
