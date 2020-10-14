@@ -6,22 +6,17 @@ The ERNI Angular Starter Project provides a base for starting a new Angular proj
 - linting
 - Prettier
 - Husky
-- static code analysis (?)
 - Bootstrap
 - ERNI styled frontend
 - REST calls
-- editor configurations for IntelliJ IDEA, VSCode
-- unit test runner
-- integration test runner
-- e2e test runner
-- HTTP client wrapper & error handling
-- environment configurations
-- dependency injection (should be supported by default)
+- Example unit tests and e2e tests
 - translation pipeline
+- environment configurations
+- (editor configurations for IntelliJ IDEA, VSCode)
 
 ## Getting Started
 
-After cloning the project ...
+After cloning the project you first should run `npm install`. Afterwards a simple `npm run start` (or alternatively `ng serve`) is enough to start the application.
 
 ## Commands
 
@@ -35,11 +30,6 @@ After cloning the project ...
 | `npm run tslint-check` | Checks if there are any rules in TSLint which conflict with Prettier            |
 
 ## Features
-
-### ERNI styled frontend
-
-The frontend of this starter project is styled as en ERNI app.
-It uses official ERNI logos and favicon as well as the "ERNI-blue" as background color.
 
 ### linting
 
@@ -102,35 +92,50 @@ Bootstrap is a front-end open source toolkit which helps to quickly design and c
 To be able to use Bootstrap, the dependencies `bootstrap` and `jquery` have been added to `package.json`.
 In `angular.json`, the Bootstrap style sheet has been added ("styles") and the Bootstrap and the jQuery JS files have been added as "scripts".
 
+### ERNI styled frontend
+
+The frontend of this starter project is styled as an ERNI app.
+It uses official ERNI logos and favicon as well as the "ERNI-blue" as background color.
+This can be used as a guideline in case an ERNI app will be created using this starter project.
+
+### REST calls
+
+A simple GET call has been implemented in the _NamesRestHttpService_.
+This call can be used as an example on how to set up further REST calls.
+
+The implemented GET call loads a list of the most common prenames of each village/city in Switzerland.
+This list is provided by a public API of the Swiss Post.
+
+You can find more information about how to communicate with backend services using HTTP here: https://angular.io/guide/http
+
+### Tests
+
+To give some input about how to write tests, the following files contain some examples:
+
+- app.component.spec.ts
+- names-rest.service.spec.ts
+- rest-call.component.spec.ts
+- welcome.component.spec.ts
+
+In addition, there are also 2 examples for end-to-end tests which can be found in the directory _e2e_.
+
 ### Translation pipeline
 
-- https://github.com/ngx-translate/core
-- http://www.ngx-translate.com/
+http://www.ngx-translate.com/ and https://github.com/ngx-translate/core
 
-# DELETE BELOW
+NGX-Translate is an internationalization library for Angular.
+It is used in this starter project to provide the texts in English and in German.
+To do so, the library has to be registered to the application module (see _app.module.ts_).
+Then thr files containing the translated texts can be created in _src/app/assets/i18n_.
+Using `{{ 'KEY.OF.THE.TEXT' | translate }}` some text can then be inserted into the HTML.
 
-## Development
+### Environment configurations
 
-### Development server
+https://angular.io/guide/build
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Using the files _src/environments/environment.\*.ts_ it is possible to define environment specific values (e.g. some base URL).
+These values can then be used in components and services by calling `${environment.key}`.
 
-### Code scaffolding
+### IDE configurations
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-### Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-### Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-### Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-### Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+TODO - Not yet clear if possible/good idea.
