@@ -138,4 +138,10 @@ These values can then be used in components and services by calling `${environme
 
 ### IDE configurations
 
-TODO - Not yet clear if possible/good idea.
+https://editorconfig.org/
+
+A `.editorconfig` file has been added to ensure some basic IDE settings.
+This file sets e.g. the default charset, the indentation style and size and the maximal line length.
+
+In case you are using **IntelliJ** or **VisualStudio** as IDE, the `.editorconfig` file is recognized automatically.
+To be able to us the file in **VS Code**, you'll need to download the plugin `EditorConfig` (https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig).
