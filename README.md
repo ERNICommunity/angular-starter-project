@@ -12,11 +12,13 @@ The ERNI Angular Starter Project provides a base for starting a new Angular proj
 - Example unit tests and e2e tests
 - translation pipeline
 - environment configurations
-- (editor configurations for IntelliJ IDEA, VSCode)
+- editor configurations for IntelliJ IDEA, VSCode
 
 ## Getting Started
 
 After cloning the project you first should run `npm install`. Afterwards a simple `npm run start` (or alternatively `ng serve`) is enough to start the application.
+
+In case you work with VS Code it is highly recommended to at least install the extension _EditorConfig_ to ensure the editor configurations provided within this project are imported into VS Code.
 
 ## Commands
 
@@ -28,6 +30,26 @@ After cloning the project you first should run `npm install`. Afterwards a simpl
 | `npm run test`         | Runs the tests of the angular app                                               |
 | `npm run e2e`          | Runs the e2e-tests of the angular app                                           |
 | `npm run tslint-check` | Checks if there are any rules in TSLint which conflict with Prettier            |
+
+## Recommended plugins
+
+This section proposes some plugins/extensions which greatly help development.
+
+### IntelliJ
+
+- Karma (JetBrains - Integration of the JavaScript testing suite _Karma_ to IntelliJ)
+- Rainbow Brackets (izhangzhihao - Color codes brackets to make it easier to spot matching brakets)
+- Save Actions (Alexandre DuBreuil - Allows defining actions (e.g. run _Prettier_) upon saving of changes)
+
+### VS Code
+
+- EditorConfig for VS Code (EditorConfig - Adds support for _.editorconfig_ files)
+- TSLint (Microsoft - Adds tslint to VS Code)
+- Prettier - Code formatter (Prettier - Adds support for Prettier to VS Code)
+- Angular Language Service (Angular - Provides a rich editing experience for Angular templates)
+- Bracket Pair Colorizer 2 (CoenraadS - Allows matching brackets to be identified with colours)
+- TypeScript Importer (pmneo - Automatically searches for TypeScript definitions in workspace files and provides all known symbols as completion item to allow code completion)
+- Angular Snippets (John Papa - Adds snippets for Angular for TypeScript and HTML)
 
 ## Features
 
@@ -144,4 +166,4 @@ A `.editorconfig` file has been added to ensure some basic IDE settings.
 This file sets e.g. the default charset, the indentation style and size and the maximal line length.
 
 In case you are using **IntelliJ** or **VisualStudio** as IDE, the `.editorconfig` file is recognized automatically.
-To be able to us the file in **VS Code**, you'll need to download the plugin `EditorConfig` (https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig).
+To be able to use the file in **VS Code**, you'll need to download the plugin `EditorConfig` (https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig).
