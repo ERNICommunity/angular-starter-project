@@ -18,7 +18,7 @@ The ERNI Angular Starter Project provides a base for starting a new Angular proj
 
 After cloning the project you first should run `npm install`. Afterwards a simple `npm run start` (or alternatively `ng serve`) is enough to start the application.
 
-In case you work with VS Code it is highly recommended to at least install the extension _EditorConfig_ to ensure the editor configurations provided within this project are imported into VS Code.
+In case you work with **VS Code** it is highly recommended to at least install the extension _EditorConfig_ to ensure the editor configurations provided within this project are imported into VS Code.
 
 ## Commands
 
@@ -104,7 +104,23 @@ Husky allows easy configuration of Git Hooks.
 In this ERNI Angular Starter Project, Husky is configured to use `lint-staged` to lint only staged files
 (as linting may take a long time on larger projects).
 
-The configuration for Husky is done within `package.json`
+The configuration for Husky is done within `package.json`.
+In case you'd like to remove e.g. linting as a Git Hook, just remove the according entry:
+
+```json
+"lint-staged": {
+    "./**/*.{js,ts}": [
+        "tslint --fix",
+        "prettier --write"
+    ],
+    "./**/*.{json,md,scss}": "prettier --write"
+},
+"husky": {
+    "hooks": {
+        "pre-commit": "lint-staged"
+    }
+}
+```
 
 ### Bootstrap
 
