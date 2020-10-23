@@ -12,6 +12,7 @@ The ERNI Angular Starter Project provides a base for starting a new Angular proj
 - Example unit tests and e2e tests
 - translation pipeline
 - ChangeDetectionStrategy.OnPush
+- Webpack Bundle Analyzer
 - environment configurations
 - editor configurations for IntelliJ IDEA, VSCode
 
@@ -23,14 +24,18 @@ In case you work with **VS Code** it is highly recommended to at least install t
 
 ## Commands
 
-| Command                | Explanation                                                                     |
-| ---------------------- | ------------------------------------------------------------------------------- |
-| `npm run lint`         | Runs TSLint on the project                                                      |
-| `npm run start`        | Compiles and starts the angular app. It is then served to http://localhost:4200 |
-| `npm run build`        | Builds the angular app                                                          |
-| `npm run test`         | Runs the tests of the angular app                                               |
-| `npm run e2e`          | Runs the e2e-tests of the angular app                                           |
-| `npm run tslint-check` | Checks if there are any rules in TSLint which conflict with Prettier            |
+| Command                    | Explanation                                                                                             |
+| -------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `npm run start`            | Compiles and starts the angular app. It is then served to http://localhost:4200                         |
+| `npm run build`            | Builds the angular app                                                                                  |
+| `npm run build:stats`      | Builds the angular app and creates the _stats.json_ file for the webpack bundle analyzer                |
+| `npm run build:prod`       | Builds the angular app for production                                                                   |
+| `npm run build:prod:stats` | Builds the angular app for production and creates the _stats.json_ file for the webpack bundle analyzer |
+| `npm run test`             | Runs the tests of the angular app                                                                       |
+| `npm run lint`             | Runs TSLint on the project                                                                              |
+| `npm run e2e`              | Runs the e2e-tests of the angular app                                                                   |
+| `npm run tslint-check`     | Checks if there are any rules in TSLint which conflict with Prettier                                    |
+| `npm run analyze`          | Runs the webpack-bundle-analyzer to visualise the size of the webpack output files                      |
 
 ## Recommended plugins
 
@@ -182,6 +187,17 @@ The change detection strategy `OnPush` tells Angular that the component only dep
 - The `Input` reference changes
 - An event originated from the component or one of its children
 - Change detection is run explicitly
+
+### Webpack Bundle Analyzer
+
+https://github.com/webpack-contrib/webpack-bundle-analyzer
+
+The `webpack-bundle-analyzer` is a tool which helps analyzing the bundle size of an Angular application by visualizing the size of webpack output files with an interactive zoomable treemap.
+It is installed as dev dependency.
+
+To create the visualization first call the command `npm run build:stats`.
+This generates a _stats.json_ file inside of the _dist_ folder (this is done for the development build - in case you'd like to check the production build, use the command `npm run build:prod:stats`).
+You can then run `npm run analyze` to run the analyzer and see the result in your browser at _localhost:8888_.
 
 ### Environment configurations
 
