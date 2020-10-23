@@ -11,6 +11,7 @@ The ERNI Angular Starter Project provides a base for starting a new Angular proj
 - REST calls
 - Example unit tests and e2e tests
 - translation pipeline
+- ChangeDetectionStrategy.OnPush
 - environment configurations
 - editor configurations for IntelliJ IDEA, VSCode
 
@@ -166,6 +167,21 @@ It is used in this starter project to provide the texts in English and in German
 To do so, the library has to be registered to the application module (see _app.module.ts_).
 Then thr files containing the translated texts can be created in _src/app/assets/i18n_.
 Using `{{ 'KEY.OF.THE.TEXT' | translate }}` some text can then be inserted into the HTML.
+
+### ChangeDetectionStrategy.OnPush
+
+https://angular.io/api/core/ChangeDetectionStrategy
+
+By default Angular uses the `ChanceDetectionStrategy.Default` change detection strategy.
+This strategy does not assume anything about the application and therefore every time something changes in the application, a change detection will run on all components to check if the component needs to be updated.
+For big applications with thousands of expressions, this might cause performance problems.
+In this case, it is possible to help Angular to decide which components to update by using the `ChanceDetectionStrategy.OnPush`.
+
+The change detection strategy `OnPush` tells Angular that the component only depends on its `@inputs()` and only needs to be checked in the following cases:
+
+- The `Input` reference changes
+- An event originated from the component or one of its children
+- Change detection is run explicitly
 
 ### Environment configurations
 

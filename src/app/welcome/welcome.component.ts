@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
   styleUrls: ['./welcome.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WelcomeComponent implements OnInit {
   constructor(translate: TranslateService) {
