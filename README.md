@@ -85,6 +85,8 @@ This removes the need to discuss style in code reviews and saves time and energy
 You can configure Prettier by changing the file `.prettierrc.js`.
 More information can be found here: https://prettier.io/docs/en/configuration.html
 
+To make Prettier ignore files or directories, just add them to the file `.prettierignore`.
+
 In order to be able to run Prettier and TSLint without conflict, `tslint-config-prettier` has been added to this project (https://github.com/prettier/tslint-config-prettier).
 
 There is still the possibility, that there are some rules in TSLint which conflict with Prettier.
