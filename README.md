@@ -199,3 +199,38 @@ This file sets e.g. the default charset, the indentation style and size and the 
 
 In case you are using **IntelliJ** or **VisualStudio** as IDE, the `.editorconfig` file is recognized automatically.
 To be able to use the file in **VS Code**, you'll need to download the plugin `EditorConfig` (https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig).
+
+## Further information
+
+### Project structure
+
+The current project structure best suits a small to medium project.
+There are many ways to make this structure more scalable.
+One possibility is described in the following blog post: https://itnext.io/choosing-a-highly-scalable-folder-structure-in-angular-d987de65ec7 (GitHub: https://github.com/mathisGarberg/angular-folder-structure).
+The mentioned blog post proposes the following structure:
+
+```
+|-- app
+     |-- modules
+          |-- home
+               |-- components
+               |-- pages
+               |-- home-routing.module.ts
+               |-- home.module.ts
+          |-- ...
+     |-- core
+          |-- services
+          |-- interceptors
+          |-- header
+          |-- ...
+          |-- core.module.ts
+     |-- shared
+          |-- models
+          |-- ...
+     |-- configs
+|-- assets
+     |-- ...
+```
+
+For more information head over to the blog post.
+Keep in mind that this is just a suggestion and focuses on a multiple-module architecture with a large focus on scaling.
