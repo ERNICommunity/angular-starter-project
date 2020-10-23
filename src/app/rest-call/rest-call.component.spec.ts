@@ -7,6 +7,7 @@ import { Observable, of } from 'rxjs';
 import { PrenameRanking } from '../model/prename-ranking';
 import { By } from '@angular/platform-browser';
 import { NamesRestHttpService } from '../service/names-rest.service';
+import { ChangeDetectionStrategy } from '@angular/core';
 
 describe('RestCallComponent', () => {
   let component: RestCallComponent;
@@ -19,7 +20,12 @@ describe('RestCallComponent', () => {
       declarations: [RestCallComponent],
       imports: [HttpClientTestingModule, TranslateModule.forRoot()],
       providers: [{ provide: NamesRestHttpService, useValue: namesRestHttpServiceMock }],
-    }).compileComponents();
+    })
+      .overrideComponent(RestCallComponent, {
+        // Override the change detection strategy to ensure the test works
+        set: { changeDetection: ChangeDetectionStrategy.Default },
+      })
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -29,7 +35,7 @@ describe('RestCallComponent', () => {
   });
 
   it('should show the title', () => {
-    expect(fixture.debugElement.query(By.css('#pageTitle')).nativeElement.textContent).toContain('REST_CALL');
+    expect(fixture.debugElement.query(By.css('#restCallPageTitle')).nativeElement.textContent).toContain('REST_CALL');
   });
 
   it('should correctly display the list of prenames', () => {
