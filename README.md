@@ -260,4 +260,4 @@ The mentioned blog post proposes the following structure:
 ```
 
 For more information head over to the blog post.
-Keep in mind that this is just a suggestion and focuses on a multiple-module architecture with a large focus on scaling.
+Keep in mind that this is just a suggestion and focuses on a multi-module architecture with a large focus on scaling.
