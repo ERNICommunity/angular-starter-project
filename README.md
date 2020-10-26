@@ -9,6 +9,7 @@ The ERNI Angular Starter Project provides a base for starting a new Angular proj
 - Bootstrap
 - ERNI styled frontend
 - REST calls
+- HTTP interceptor
 - Example unit tests and e2e tests
 - translation pipeline
 - ChangeDetectionStrategy.OnPush
@@ -153,6 +154,14 @@ The implemented GET call loads a list of the most common prenames of each villag
 This list is provided by a public API of the Swiss Post.
 
 You can find more information about how to communicate with backend services using HTTP here: https://angular.io/guide/http
+
+### HTTP interceptor
+
+https://angular.io/api/common/http/HttpInterceptor
+
+An example for an HTTP interceptor has been implemented (`logging-http-interceptor.service.ts`).
+It is used to log all outgoing REST calls to the console by printing the called URL and the used HTTP method.
+Interceptors can be used e.g. to add HTTP headers, to modify the request body, for backend mocking and so on.
 
 ### Tests
 

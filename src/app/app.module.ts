@@ -7,9 +7,10 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { RestCallComponent } from './rest-call/rest-call.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { LoggingHttpInterceptorService } from './service/logging-http-interceptor.service';
 
 export function httpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);
@@ -30,7 +31,7 @@ export function httpLoaderFactory(http: HttpClient): TranslateHttpLoader {
       defaultLanguage: 'en',
     }),
   ],
-  providers: [],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: LoggingHttpInterceptorService, multi: true }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
