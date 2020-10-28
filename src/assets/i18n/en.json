@@ -13,11 +13,11 @@
   "REST_CALL": {
     "TITLE": "REST Example",
     "INFORMATION": "This page demonstrates how a simple REST call can be done. It therefore calls the following endpoint:",
-    "ENDPOINT_DESCRIPTION": "This endpoint can be used to load the most common prename per postcode in Switzerland. The resulting list is then sorted by village/town and displayed below.",
+    "ENDPOINT_DESCRIPTION": "This endpoint can be used to load the most common pre-name per postcode in Switzerland. The resulting list is then sorted by village/town and displayed below.",
     "TABLE": {
       "CITY": "City",
       "ZIP_CODE": "Zip Code",
-      "PRENAME": "Prename",
+      "PRENAME": "Pre-name",
       "NUMBER": "Number"
     }
   }

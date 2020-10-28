@@ -19,7 +19,16 @@ The ERNI Angular Starter Project provides a base for starting a new Angular proj
 
 ## Getting Started
 
-After cloning the project you first should run `npm install`. Afterwards a simple `npm run start` (or alternatively `ng serve`) is enough to start the application.
+### Prerequisites
+
+Make sure the following tools and software are installed on your computer:
+
+- NodeJS and npm (https://nodejs.org/en/ - https://www.npmjs.com/get-npm)
+- Chrome (https://www.google.com/chrome/)
+
+### Running the project
+
+After cloning the project you first should run `npm install`. Afterwards a simple `npm run start` (or `ng serve`) is enough to start the application.
 
 In case you work with **VS Code** it is highly recommended to at least install the extension _EditorConfig_ to ensure the editor configurations provided within this project are imported into VS Code.
 
@@ -45,7 +54,7 @@ This section proposes some plugins/extensions which greatly help development.
 ### IntelliJ
 
 - Karma (JetBrains - Integration of the JavaScript testing suite _Karma_ to IntelliJ)
-- Rainbow Brackets (izhangzhihao - Color codes brackets to make it easier to spot matching brakets)
+- Rainbow Brackets (izhangzhihao - Color codes brackets to make it easier to spot matching brackets)
 - Save Actions (Alexandre DuBreuil - Allows defining actions (e.g. run _Prettier_) upon saving of changes)
 
 ### VS Code
@@ -67,7 +76,7 @@ https://palantir.github.io/tslint/
 Angular 10 uses TSLint by default. Linting is done automatically with each commit (as long as the Git-Tool you use supports pre-commit hooks). It can be invoked manually by calling `ng lint`.
 
 The AirBnB Styleguide for TSLint (https://github.com/progre/tslint-config-airbnb) provides quite an extensive (and strict) set of rules.
-As an example for using a stylguide, it has been included into the ERNI Angular Starter Project.
+As an example for using a styleguide, it has been included into the ERNI Angular Starter Project.
 As soon as Angular has been moved from TSLint to ESLint, this styleguide will also have to be replaced with the ESLint version.
 
 Deactivating the AirBnB-Styleguide can be done quite easily by removing `tslint-config-airbnb` from the `extends` section in the file `tslint.json`.
@@ -137,7 +146,7 @@ https://getbootstrap.com/
 
 Bootstrap is a front-end open source toolkit which helps to quickly design and customize responsive mobile-first sites.
 To be able to use Bootstrap, the dependencies `bootstrap` and `jquery` have been added to `package.json`.
-In `angular.json`, the Bootstrap style sheet has been added ("styles") and the Bootstrap and the jQuery JS files have been added as "scripts".
+In `angular.json`, the Bootstrap style sheet has been added ("styles"), and the Bootstrap and the jQuery JS files have been added as "scripts".
 
 ### ERNI styled frontend
 
@@ -150,7 +159,7 @@ This can be used as a guideline in case an ERNI app will be created using this s
 A simple GET call has been implemented in the _NamesRestHttpService_.
 This call can be used as an example on how to set up further REST calls.
 
-The implemented GET call loads a list of the most common prenames of each village/city in Switzerland.
+The implemented GET call loads a list of the most common pre-names of each village/city in Switzerland.
 This list is provided by a public API of the Swiss Post.
 
 You can find more information about how to communicate with backend services using HTTP here: https://angular.io/guide/http
@@ -181,14 +190,14 @@ http://www.ngx-translate.com/ and https://github.com/ngx-translate/core
 NGX-Translate is an internationalization library for Angular.
 It is used in this starter project to provide the texts in English and in German.
 To do so, the library has to be registered to the application module (see _app.module.ts_).
-Then thr files containing the translated texts can be created in _src/app/assets/i18n_.
+Then the files containing the translated texts can be created in _src/app/assets/i18n_.
 Using `{{ 'KEY.OF.THE.TEXT' | translate }}` some text can then be inserted into the HTML.
 
 ### ChangeDetectionStrategy.OnPush
 
 https://angular.io/api/core/ChangeDetectionStrategy
 
-By default Angular uses the `ChanceDetectionStrategy.Default` change detection strategy.
+By default, Angular uses the `ChanceDetectionStrategy.Default` change detection strategy.
 This strategy does not assume anything about the application and therefore every time something changes in the application, a change detection will run on all components to check if the component needs to be updated.
 For big applications with thousands of expressions, this might cause performance problems.
 In this case, it is possible to help Angular to decide which components to update by using the `ChanceDetectionStrategy.OnPush`.
@@ -203,7 +212,7 @@ The change detection strategy `OnPush` tells Angular that the component only dep
 
 https://github.com/webpack-contrib/webpack-bundle-analyzer
 
-The `webpack-bundle-analyzer` is a tool which helps analyzing the bundle size of an Angular application by visualizing the size of webpack output files with an interactive zoomable treemap.
+The `webpack-bundle-analyzer` is a tool which helps to analyze the bundle size of an Angular application by visualizing the size of webpack output files with an interactive zoomable treemap.
 It is installed as dev dependency.
 
 To create the visualization first call the command `npm run build:stats`.
