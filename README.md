@@ -1,6 +1,5 @@
 # ERNI Angular Starter Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
 The ERNI Angular Starter Project provides a base for starting a new Angular project. The following main features are included:
 
 - linting
@@ -16,6 +15,9 @@ The ERNI Angular Starter Project provides a base for starting a new Angular proj
 - Webpack Bundle Analyzer
 - environment configurations
 - editor configurations for IntelliJ IDEA, VSCode
+
+This project was originally generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
+Currently it uses Angular 11.0.2.
 
 ## Getting Started
 
