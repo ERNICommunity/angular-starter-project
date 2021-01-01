@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -7,12 +7,10 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./welcome.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class WelcomeComponent implements OnInit {
+export class WelcomeComponent {
   constructor(translate: TranslateService) {
     // This language will be used as fallback in case a translation could not be found in the currently selected
     // language
     translate.setDefaultLang('en');
   }
-
-  ngOnInit(): void {}
 }
