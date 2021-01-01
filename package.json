@@ -1,6 +1,6 @@
 {
   "name": "angular-starter-project",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "The ERNI starter project for Angular projects.",
   "scripts": {
     "ng": "ng",
