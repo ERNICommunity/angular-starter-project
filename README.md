@@ -17,7 +17,7 @@ The ERNI Angular Starter Project provides a base for starting a new Angular proj
 - editor configurations for IntelliJ IDEA, VSCode
 
 This project was originally generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
-Currently it uses Angular 11.0.2.
+Currently it uses Angular 11.0.5.
 
 ## Getting Started
 
@@ -44,9 +44,9 @@ In case you work with **VS Code** it is highly recommended to at least install t
 | `npm run build:prod`       | Builds the angular app for production                                                                   |
 | `npm run build:prod:stats` | Builds the angular app for production and creates the _stats.json_ file for the webpack bundle analyzer |
 | `npm run test`             | Runs the tests of the angular app                                                                       |
-| `npm run lint`             | Runs TSLint on the project                                                                              |
+| `npm run lint`             | Runs ESLint on the project                                                                              |
 | `npm run e2e`              | Runs the e2e-tests of the angular app                                                                   |
-| `npm run tslint-check`     | Checks if there are any rules in TSLint which conflict with Prettier                                    |
+| `npm run eslint-check`     | Checks if there are any rules in ESLint which conflict with Prettier                                    |
 | `npm run analyze`          | Runs the webpack-bundle-analyzer to visualise the size of the webpack output files                      |
 
 ## Recommended plugins
@@ -62,7 +62,7 @@ This section proposes some plugins/extensions which greatly help development.
 ### VS Code
 
 - EditorConfig for VS Code (EditorConfig - Adds support for _.editorconfig_ files)
-- TSLint (Microsoft - Adds tslint to VS Code)
+- ESLint (Microsoft - Adds eslint to VS Code)
 - Prettier - Code formatter (Prettier - Adds support for Prettier to VS Code)
 - Angular Language Service (Angular - Provides a rich editing experience for Angular templates)
 - Bracket Pair Colorizer 2 (CoenraadS - Allows matching brackets to be identified with colours)
@@ -73,19 +73,19 @@ This section proposes some plugins/extensions which greatly help development.
 
 ### linting
 
-https://palantir.github.io/tslint/
+https://eslint.org
 
-Angular 10 uses TSLint by default. Linting is done automatically with each commit (as long as the Git-Tool you use supports pre-commit hooks). It can be invoked manually by calling `ng lint`.
+> Angular 11 uses TSLint by default, but recommends using ESLint.
+> To migrate from TSLint to ESLint, the project _Angular ESLint_ (https://github.com/angular-eslint/angular-eslint) has been used.
 
-The AirBnB Styleguide for TSLint (https://github.com/progre/tslint-config-airbnb) provides quite an extensive (and strict) set of rules.
+Linting is done automatically with each commit (as long as the Git-Tool you use supports pre-commit hooks).
+It can be invoked manually by calling `ng lint`.
+
+The AirBnB Styleguide for ESLint (https://www.npmjs.com/package/eslint-config-airbnb-typescript) provides quite an extensive (and strict) set of rules.
 As an example for using a styleguide, it has been included into the ERNI Angular Starter Project.
-As soon as Angular has been moved from TSLint to ESLint, this styleguide will also have to be replaced with the ESLint version.
 
-Deactivating the AirBnB-Styleguide can be done quite easily by removing `tslint-config-airbnb` from the `extends` section in the file `tslint.json`.
-If you want to completely remove the AirBnB-Styleguide you then can run the command `npm uninstall tslint-config-airbnb`.
-
-> In a future release, Angular will migrate from TSLint to ESLint.
-> As soon as this migration has been done, this project needs to be updated.
+Deactivating the AirBnB-Styleguide can be done quite easily by removing `airbnb-typescript/base` from the `extends` section in the file `.eslintrc.json`.
+If you want to completely remove the AirBnB-Styleguide you then can run the command `npm uninstall eslint-config-airbnb`.
 
 ### Prettier
 
@@ -99,11 +99,11 @@ More information can be found here: https://prettier.io/docs/en/configuration.ht
 
 To make Prettier ignore files or directories, just add them to the file `.prettierignore`.
 
-In order to be able to run Prettier and TSLint without conflict, `tslint-config-prettier` has been added to this project (https://github.com/prettier/tslint-config-prettier).
+In order to be able to run Prettier and ESLint without conflict, `eslint-config-prettier` has been added to this project (https://github.com/prettier/eslint-config-prettier).
 
-There is still the possibility, that there are some rules in TSLint which conflict with Prettier.
-To find which rules are in conflict, you can run `npm run tslint-check`.
-This prints a list of conflicting rules which can then be deactivated in `./tslint.json`
+There is still the possibility, that there are some rules in ESLint which conflict with Prettier.
+To find which rules are in conflict, you can run `npm run eslint-check`.
+This prints a list of conflicting rules which can then be deactivated in `./.eslintrc.json`
 
 Prettier provides several commands - the following list shows some of the more important ones:
 
@@ -129,16 +129,16 @@ In case you'd like to remove e.g. linting as a Git Hook, just remove the accordi
 
 ```json
 "lint-staged": {
-    "./**/*.{js,ts}": [
-        "tslint --fix",
-        "prettier --write"
-    ],
-    "./**/*.{json,md,scss}": "prettier --write"
+  "./**/*.{js,ts}": [
+    "eslint --fix",
+    "prettier --write"
+  ],
+  "./**/*.{json,md,scss}": "prettier --write"
 },
 "husky": {
-    "hooks": {
-        "pre-commit": "lint-staged"
-    }
+  "hooks": {
+    "pre-commit": "lint-staged"
+  }
 }
 ```
 
