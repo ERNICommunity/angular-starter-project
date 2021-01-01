@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { NamesRestHttpService } from '../service/names-rest.service';
 import { Observable } from 'rxjs';
+import { NamesRestHttpService } from '../service/names-rest.service';
 import { PrenameRanking } from '../model/prename-ranking';
 
 @Component({
